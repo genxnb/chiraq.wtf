@@ -6,6 +6,12 @@ local Deleted = false
 local File = pcall(function()
     AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
 end)
+local Player = game.Players.LocalPlayer
+
+local teleport = function(CFrame)
+	local hrp = Player.Character:WaitForChild("HumanoidRootPart")
+    hrp.CFrame = CFrame
+end
 if not File then
     table.insert(AllIDs, actualHour)
     writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
@@ -67,14 +73,14 @@ function hopserv()
     end
 end
 
-    if workspace:WaitForChild("Folder").map.Shop.Safe1:WaitForChild("Door"):WaitForChild("ProximityPrompt").Enabled == true then then
-        teleport(CFrame.new(35774.2656, 17.6827965, -268.366211, 0.998930573, 2.08330864e-08, -0.0462350808, -1.8876916e-08, 1, 4.27458318e-08, 0.0462350808, -4.18273416e-08, 0.998930573))
+if workspace.Folder.map.Shop.Safe1:WaitForChild("Door"):WaitForChild("ProximityPrompt").Enabled == true then
+        teleport(workspace.STU.MIc.Part.CFrame)
+        workspace.Folder.map.Shop.Safe1.Door.ProximityPrompt.HoldDuration = 0
         fireproximityprompt(workspace.Folder.map.Shop.Safe1.Door.ProximityPrompt)
-        task.wait(1)
         queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/genxnb/chiraq.wtf/refs/heads/main/autofarm.lua"))()')
         hopserv()
     else
-        task.wait(1)
         queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/genxnb/chiraq.wtf/refs/heads/main/autofarm.lua"))()')
         hopserv()
     end
+
