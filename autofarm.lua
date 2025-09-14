@@ -76,16 +76,19 @@ function hopserv()
 end
 
 
-    if workspace:WaitForChild("Folder"):WaitForChild("map"):WaitForChild("Shop"):WaitForChild("Safe1"):WaitForChild("Door"):WaitForChild("ProximityPrompt").Enabled == true then
+if workspace:WaitForChild("Folder"):WaitForChild("map"):WaitForChild("Shop"):WaitForChild("Safe1"):WaitForChild("Door"):WaitForChild("ProximityPrompt").Enabled == true then
         teleport(workspace:WaitForChild("STU").MIc.Part.CFrame)
+        task.wait(1)
         workspace.Folder.map.Shop.Safe1.Door.ProximityPrompt.HoldDuration = 0
+        task.wait(1)
         fireproximityprompt(workspace.Folder.map.Shop.Safe1.Door.ProximityPrompt)
         task.wait(3)
         queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/genxnb/chiraq.wtf/refs/heads/main/autofarm.lua"))()')
+        task.wait(1)
         hopserv()
     else
         queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/genxnb/chiraq.wtf/refs/heads/main/autofarm.lua"))()')
+        task.wait(1)
         hopserv()
     end
-
 
