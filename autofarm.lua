@@ -1,9 +1,9 @@
 wait(10)
 mousemoveabs(1287, 1158)
-wait(8)
+wait(15)
 mousemoveabs(1286, 1158)
 mouse1click()
-
+print("clicked")
 task.wait(5)
 
 local PlaceID = game.PlaceId
