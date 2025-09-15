@@ -1,6 +1,6 @@
 wait(2)
 mousemoveabs(1287, 1158)
-wait(1)
+wait(6)
 mousemoveabs(1286, 1158)
 mouse1click()
 
@@ -15,8 +15,6 @@ local File = pcall(function()
     AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
 end)
 local Player = game.Players.LocalPlayer
-
-firesignal(Player.PlayerGui.MainScreen.IntroFrame.PlayButton.MouseButton1Click)
 
 local teleport = function(CFrame)
 	local hrp = Player.Character:WaitForChild("HumanoidRootPart")
