@@ -1,6 +1,6 @@
-wait(10)
-mousemoveabs(1287, 1158)
-wait(15)
+wait(6)
+mousemoveabs(1287, 1158) --67
+wait(7)
 mousemoveabs(1286, 1158)
 mouse1click()
 print("clicked")
