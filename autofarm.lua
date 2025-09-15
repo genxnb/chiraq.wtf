@@ -1,6 +1,7 @@
+mousemoveabs(0,0)
 wait(6)
-mousemoveabs(1287, 1158) --67
-wait(7)
+mousemoveabs(1287, 1158) 
+wait(1)
 mousemoveabs(1286, 1158)
 mouse1click()
 print("clicked")
@@ -97,4 +98,3 @@ if workspace:WaitForChild("Folder"):WaitForChild("map"):WaitForChild("Shop"):Wai
         task.wait(1)
         hopserv()
     end
-
