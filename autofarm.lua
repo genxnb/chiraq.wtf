@@ -1,6 +1,6 @@
-wait(2)
+wait(10)
 mousemoveabs(1287, 1158)
-wait(6)
+wait(8)
 mousemoveabs(1286, 1158)
 mouse1click()
 
