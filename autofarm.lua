@@ -1,4 +1,10 @@
-task.wait(2)
+wait(2)
+mousemoveabs(1287, 1158)
+wait(1)
+mousemoveabs(1286, 1158)
+mouse1click()
+
+task.wait(5)
 
 local PlaceID = game.PlaceId
 local AllIDs = {}
@@ -9,6 +15,8 @@ local File = pcall(function()
     AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
 end)
 local Player = game.Players.LocalPlayer
+
+firesignal(Player.PlayerGui.MainScreen.IntroFrame.PlayButton.MouseButton1Click)
 
 local teleport = function(CFrame)
 	local hrp = Player.Character:WaitForChild("HumanoidRootPart")
